@@ -13,6 +13,7 @@ resource "aws_instance" "example" {
   #   network_interface_id = aws_network_interface.foo.id
   #  device_index         = 0
   #}
+  #
 
   credit_specification {
     cpu_credits = "unlimited"

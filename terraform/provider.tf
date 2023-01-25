@@ -6,7 +6,15 @@ terraform {
       version = "~>3.0"
     }
   }
+
+
+  backend "s3" {
+    region = "eu-central-1"
+    key    = "tf-state-file"
+  }
 }
+
+
 
 provider "aws" {
   region = "eu-central-1"

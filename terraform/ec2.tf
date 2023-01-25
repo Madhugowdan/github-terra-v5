@@ -1,7 +1,7 @@
 
 resource "aws_instance" "example" {
-  ami           = data.aws_ami.windows.id
-  instance_type = var.instance-type
+  ami                    = data.aws_ami.windows.id
+  instance_type          = var.instance-type
   subnet_id              = aws_subnet.my_subnet.id
   vpc_security_group_ids = [aws_security_group.allow_tls.id]
 
@@ -52,7 +52,7 @@ resource "aws_network_interface" "foo" {
 resource "aws_ebs_volume" "example" {
   availability_zone = var.sub_availability_zone
   size              = 10
-  
+
 }
 
 resource "aws_volume_attachment" "ebs_att" {
